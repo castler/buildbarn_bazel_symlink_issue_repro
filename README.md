@@ -14,7 +14,7 @@ Following this flag we find https://github.com/bazelbuild/bazel/issues/6631, whi
 implemented by Bazel.
 
 The used Remote Execution Setup was BuildBarn. Trying to reproduce the issue on another setup made it clear, that the issue
-seems to be within BuildBarn. 
+also exists in other remote execution systems. A first analysis on BuildBarn side was done within https://github.com/buildbarn/bb-remote-execution/issues/104, it turned out that the issue most certainly resides within Bazel, since the remote files are never declared as symlink.
 
 ## How to reproduce the issue
 
